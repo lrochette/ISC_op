@@ -15,7 +15,7 @@ spec:
   source:
     directory:
       include: >-
-        {all-runtimes-all-clusters/*.yaml,all-runtimes-all-clusters/**/*.yaml,runtimes/csdpop/*.yaml,runtimes/csdpop/**/*.yaml,control-planes/*.yaml,control-planes/**/*.yaml,csdpop/default.yaml}
+        {all-runtimes-all-clusters/*.yaml,all-runtimes-all-clusters/**/*.yaml,runtimes/csdpop/*.yaml,runtimes/csdpop/**/*.yaml,control-planes/*.yaml,control-planes/**/*.yaml,csdpop/default.yaml,csdpop/apps-dev.yaml}
       recurse: true
     path: resources
     repoURL: https://github.com/lrochette/ISC_op.git
