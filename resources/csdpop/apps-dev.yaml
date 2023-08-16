@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/lrochette/csdpop_applications.git
-    path: apps-dev
+    path: apps/dev
     targetRevision: HEAD
     directory:
       include: '*'
