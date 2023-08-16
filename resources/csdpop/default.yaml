@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: default
+  labels:
+    codefresh.io/entity: 'git-source'
+    codefresh.io/internal: 'false'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lrochette/csdpop_git-source.git
+    path: resources
+    targetRevision: HEAD
+    directory:
+      include: '{*.yaml,**/*.yaml}'
+      exclude: ''
+      recurse: true
+  destination:
+    namespace: csdpop
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
